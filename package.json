@@ -1,0 +1,43 @@
+{
+  "name": "qqtools_taoba",
+  "scripts": {
+    "start": "node lib/index.js",
+    "eslint": "eslint ./ --fix",
+    "eslint:no-fix": "eslint ./"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "chalk": "^4.1.0",
+    "cosmiconfig": "^6.0.0",
+    "js-base64": "^3.2.4",
+    "lodash": "^4.17.19",
+    "moment": "^2.27.0",
+    "mysql": "^2.18.1",
+    "nunjucks": "^3.2.2",
+    "ws": "^7.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "babel-eslint": "^11.0.0-beta.2",
+    "commitizen": "^4.1.2",
+    "cz-conventional-changelog": "^3.2.0",
+    "eslint": "^7.5.0",
+    "eslint-plugin-react": "^7.20.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": "eslint"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
